@@ -1,4 +1,38 @@
-**BEFORE FILING AN ISSUE, READ THE RELEVANT SECTION IN THE [CONTRIBUTING](https://github.com/citra-emu/citra/wiki/Contributing#reporting-issues) FILE!!!**
+# Citra ARM64 MacOS Standalone
+
+This is a fork of `Citra` with the intention of publishing standalone builds for
+Apple Silicon Macs for users that want to try native builds of Citra but dont have
+the know-how to build it themselves. The only difference between this repository
+and upstream `Citra` is the addition of the script `build-arm64-macos-standalone.sh`
+that is used to build and bundle `Citra` standalone for Apple Silicon Macs.
+
+The newest release can be found under [Releases](https://github.com/dagstuan/citra-arm64-macos-standalone/releases).
+
+The releases are not signed and notarized, so you will need to allow MacOS to run Citra
+after download. Apple has a [guide for this](https://support.apple.com/en-us/HT202491).
+
+The releases are published without any support. Use at your own risk.
+
+Resources used for creating the builds:
+
+* [Building for MacOS](https://github.com/citra-emu/citra/wiki/Building-for-macOS)
+* [Citra on M1 / M1 Pro - ARM64 Native App - Guide - Reddit](https://www.reddit.com/r/macgaming/comments/qob17l/citra_on_m1_m1_pro_arm64_native_app_guide/)
+
+## Building standalone for Apple Silicon yourself.
+
+If you want to build yourself, this repository needs to be cloned with the
+`--recursive`-flag. Such as
+
+```
+git clone --recursive https://github.com/dagstuan/citra-arm64-macos-standalone.git
+cd citra-arm64-macos-standalone
+```
+
+You can then follow the [official guide for building on MacOS](https://github.com/citra-emu/citra/wiki/Building-for-macOS) for installing the dependencies required. In addition a few others are needed for bundling. They are documented in `build-arm64-macos-standalone.sh`.
+
+After installing the dependencies, you can run `./build-arm64-macos-standalone.sh` to
+get a standalone build of `Citra` for Apple Silicon. The script creates the file
+`citra-arm64-macos-standalone.zip` containing the app.
 
 # Citra
 
